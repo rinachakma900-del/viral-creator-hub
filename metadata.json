@@ -1,0 +1,6 @@
+{
+  "name": "Viral Creator Hub",
+  "description": "Smart viral content creation toolkit with AI assistant, monetization earnings calculator, creator community links, and AdMob integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
