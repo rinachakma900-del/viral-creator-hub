@@ -24,16 +24,20 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: actions/gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew || true
 
       - name: Build APK with Gradle
-        run: gradle assembleDebug --no-daemon
+        run: ./gradlew assembleDebug --no-daemon
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: ViralCreatorHub-APK
           path: app/build/outputs/apk/debug/app-debug.apk
+
 
 
 
